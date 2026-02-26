@@ -1,5 +1,5 @@
-const app = require("../backend/server");
-const connectDB = require("../backend/config/db");
+const app = require("../../../backend/server");
+const connectDB = require("../../../backend/config/db");
 
 let isConnected = false;
 
@@ -8,5 +8,6 @@ module.exports = async (req, res) => {
     await connectDB();
     isConnected = true;
   }
+
   return app(req, res);
 };
