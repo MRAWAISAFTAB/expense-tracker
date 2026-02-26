@@ -8,5 +8,6 @@ module.exports = async (req, res) => {
     await connectDB();
     isConnected = true;
   }
+
   return app(req, res);
 };
