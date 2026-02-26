@@ -31,9 +31,9 @@ app.use(cookieParser())
 
 connectDB()
 
-app.use("/", authRoutes)
-app.use("/income", incomeRoutes)
-app.use("/expense", expenseRoutes)
+app.use("/api", authRoutes)
+app.use("/api/income", incomeRoutes)
+app.use("/api/expense", expenseRoutes)
 app.use("/dashboard", dashboardRoutes)
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 

@@ -18,6 +18,5 @@ router.get("/get", auth, getAllExpense);
 router.get("/downloadexcel", auth, downloadExpenseExcel);
 
 // Delete an income by ID
-router.delete("/:id", auth, deleteExpense);
 
 module.exports = router;

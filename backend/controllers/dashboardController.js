@@ -9,8 +9,8 @@ const getDashboardData = async (req, res) => {
     const expenses = await Expense.find({ userId }).sort({ date: -1 });
 
     // Totals
-    const totalIncome = incomes.reduce((sum, i) => sum + Number(i.amount || 0), 0);
-    const totalExpense = expenses.reduce((sum, e) => sum + Number(e.amount || 0), 0);
+    // const totalIncome = incomes.reduce((sum, i) => sum + Number(i.amount || 0), 0);
+    // const totalExpense = expenses.reduce((sum, e) => sum + Number(e.amount || 0), 0);
     const balance = totalIncome - totalExpense;
 
     // Last 60 days transactions combined
